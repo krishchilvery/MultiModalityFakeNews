@@ -69,7 +69,7 @@ train_all_false = train_all_false.sample(frac=1).reset_index(drop=True)
 train_all_false_series = train_all_false['clean_title'].to_list()
 
 # selecting samples to be used for augmentation
-aug_samples = 20000 # should be a multiple of 50
+aug_samples = 10000 # should be a multiple of 50
 train_all_true_bt = train_all_true[:aug_samples]['clean_title'].to_list() # data for back translation
 train_all_true_gpt = train_all_true[aug_samples: 2*aug_samples]['clean_title'].to_list() # data for GPT-3
 
